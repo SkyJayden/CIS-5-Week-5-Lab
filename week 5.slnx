@@ -1,7 +1,34 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="week 5.vcxproj" />
-</Solution>
+#include <iostream>
+
+// Lab 5 — Jayden MB
+// CIS 5 Week 05 · Eligibility check
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+
+
+int main() {
+	int age = 0;
+	cout << "Age?: ";
+		cin >> age;
+	double gpa = 0.0;
+	cout << "GPA?: ";
+		cin >> gpa;
+
+	bool adult = age >= 18; 
+	bool honors = gpa >= 3.5;
+
+	if (adult && honors) {
+		cout << "Eligible for the the honors program.\n";
+	}
+	else if (adult || honors) {
+		cout << "Halfway there. One requirement met.\n";
+	}
+	else {
+		cout << "Not eligible yet.\n";
+	}
+
+	return 0;
+}
